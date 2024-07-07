@@ -64,6 +64,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="107.33333333333333"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="1"/>
+                                                <connections>
+                                                    <action selector="clickBtn1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ts-7r-p88"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ln-z0-ewx" userLabel="btn2">
                                                 <rect key="frame" x="106.66666666666669" y="0.0" width="102.33333333333331" height="107.33333333333333"/>
@@ -213,6 +216,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9hA-MX-mnd"/>
+                    <connections>
+                        <outlet property="lblResult" destination="V8T-kg-QOo" id="fZa-Sh-cWe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
