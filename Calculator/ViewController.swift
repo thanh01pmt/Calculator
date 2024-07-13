@@ -9,9 +9,9 @@ class ViewController: UIViewController {
     
     //--------------------------------//
     // Constants and Varibles
-    let result: Float = 0.0
-    let preResult: Float = 0.0
-    let formula: String = ""
+    var result: Double = 0.0
+    var preResult: Double = 0.0
+    var formula: String = ""
     
     //--------------------------------//
     // Outlets
@@ -22,94 +22,142 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblResult: UILabel!
     
     //--------------------------------//
-    // Support Function
-    
-    //--------------------------------//
-    // Number Button Action
+    // Formula Button Action
     // A tip to check data type
     // lblResult.text = String(describing: type(of: sender.titleLabel!.text!))
     
     @IBAction func clickBtn0(_ sender: UIButton) {
+        clickBtnRelatedToFormula(sender)
     }
     
     @IBAction func clickBtn1(_ sender: UIButton) {
+        clickBtnRelatedToFormula(sender)
     }
     
     @IBAction func clickBtn2(_ sender: UIButton) {
+        clickBtnRelatedToFormula(sender)
     }
     
     @IBAction func clickBtn3(_ sender: UIButton) {
+        clickBtnRelatedToFormula(sender)
     }
     
     @IBAction func clickBtn4(_ sender: UIButton) {
+        clickBtnRelatedToFormula(sender)
     }
     
     @IBAction func clickBtn5(_ sender: UIButton) {
+        clickBtnRelatedToFormula(sender)
     }
     
     @IBAction func clickBtn6(_ sender: UIButton) {
+        clickBtnRelatedToFormula(sender)
     }
     
     @IBAction func clickBtn7(_ sender: UIButton) {
+        clickBtnRelatedToFormula(sender)
     }
     
     @IBAction func clickBtn8(_ sender: UIButton) {
+        clickBtnRelatedToFormula(sender)
     }
     
     @IBAction func clickBtn9(_ sender: UIButton) {
+        clickBtnRelatedToFormula(sender)
     }
     
     @IBAction func clickBtnDot(_ sender: UIButton) {
+        clickBtnRelatedToFormula(sender)
+    }
+    
+    @IBAction func clickBtnPlus(_ sender: UIButton) {
+        clickBtnRelatedToFormula(sender)
+    }
+    
+    @IBAction func clickBtnMinus(_ sender: UIButton) {
+        clickBtnRelatedToFormula(sender)
+    }
+    
+    @IBAction func clickBtnMultiply(_ sender: UIButton) {
+        clickBtnRelatedToFormula(sender)
+    }
+    
+    @IBAction func clickBtnDivide(_ sender: UIButton) {
+        clickBtnRelatedToFormula(sender)
+    }
+    
+    @IBAction func clickLeftParenthesis(_ sender: UIButton) {
+        clickBtnRelatedToFormula(sender)
+    }
+    
+    @IBAction func clickRightParenthesis(_ sender: UIButton) {
+        clickBtnRelatedToFormula(sender)
     }
     
     //--------------------------------//
     // Function Button Action
     
+    @IBAction func clickBtnEqual(_ sender: UIButton) {
+        calculateResult()
+    }
+    
     @IBAction func clickBtnAllClear(_ sender: UIButton) {
+        allClear()
     }
     
     @IBAction func clickBtnDeleteLast(_ sender: UIButton) {
+        removeLastCharacter()
     }
-    
-    @IBAction func clickBtnPlus(_ sender: UIButton) {
-    }
-    
-    @IBAction func clickBtnMinus(_ sender: UIButton) {
-    }
-    
-    @IBAction func clickBtnMultiply(_ sender: UIButton) {
-    }
-    
-    @IBAction func clickBtnDivide(_ sender: UIButton) {
-    }
-    
-    @IBAction func clickBtnEqual(_ sender: UIButton) {
-    }
-    
     
     //--------------------------------//
     // Support Function
     
+    func clickBtnRelatedToFormula(_ sender: UIButton) {
+        addToFormula(sender.titleLabel!.text!)
+    }
+    
     func addToFormula(_ str: String) {
-        
+        formula += str
+        lblFormula.text = formula
     }
 
     func removeLastCharacter() {
-        
+        if formula == "" {
+            return
+        }
+        formula.removeLast()
+        lblFormula.text = formula
     }
     
-    func calculate() {
-        
+    func evaluateFormula(_ formula: String) -> Double? {
+        let expression = NSExpression(format:formula)
+        let value = expression.expressionValue(with: nil, context: nil) as? Double
+        return value
+    }
+    
+    func calculateResult() {
+        if let result = evaluateFormula(formula) {
+            self.result = result
+            lblResult.text = "= " + String(result)
+            print("\(formula) = \(result)")
+        }
     }
     
     func allClear() {
-        
+        result = 0.0
+        preResult = 0.0
+        formula = ""
+        lblFormula.text = formula
+        lblResult.text = String(result)
     }
+
+    //--------------------------------//
+    // Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        allClear()
     }
 }
 
