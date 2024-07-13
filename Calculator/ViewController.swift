@@ -150,6 +150,27 @@ class ViewController: UIViewController {
         lblFormula.text = formula
         lblResult.text = String(result)
     }
+    
+    //--------------------------------//
+    // Testcases
+    
+    func testCase1() {
+        formula = "123"
+        lblFormula.text = formula
+        calculateResult()
+    }
+    
+    func testCase2() {
+        formula = "123*0.5"
+        lblFormula.text = formula
+        calculateResult()
+    }
+    
+    func testCase3() {
+        formula = "1+2*3"
+        lblFormula.text = formula
+        calculateResult()
+    }
 
     //--------------------------------//
     // Life Cycle
@@ -158,6 +179,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         allClear()
+        testCase3()
     }
 }
 
