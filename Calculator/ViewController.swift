@@ -20,79 +20,19 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var lblFormula: UILabel!
     @IBOutlet weak var lblResult: UILabel!
+    @IBOutlet var formulaButtons: [UIButton]!
+    
     
     //--------------------------------//
     // Formula Button Action
     // A tip to check data type
     // lblResult.text = String(describing: type(of: sender.titleLabel!.text!))
     
-    @IBAction func clickBtn0(_ sender: UIButton) {
-        clickBtnRelatedToFormula(sender)
+    for btn in formulaButtons {
+        btn.addTarget(self, action: #selector(clickBtnRelatedToFormula(_:)), for: .touchUpInside)
     }
     
-    @IBAction func clickBtn1(_ sender: UIButton) {
-        clickBtnRelatedToFormula(sender)
-    }
     
-    @IBAction func clickBtn2(_ sender: UIButton) {
-        clickBtnRelatedToFormula(sender)
-    }
-    
-    @IBAction func clickBtn3(_ sender: UIButton) {
-        clickBtnRelatedToFormula(sender)
-    }
-    
-    @IBAction func clickBtn4(_ sender: UIButton) {
-        clickBtnRelatedToFormula(sender)
-    }
-    
-    @IBAction func clickBtn5(_ sender: UIButton) {
-        clickBtnRelatedToFormula(sender)
-    }
-    
-    @IBAction func clickBtn6(_ sender: UIButton) {
-        clickBtnRelatedToFormula(sender)
-    }
-    
-    @IBAction func clickBtn7(_ sender: UIButton) {
-        clickBtnRelatedToFormula(sender)
-    }
-    
-    @IBAction func clickBtn8(_ sender: UIButton) {
-        clickBtnRelatedToFormula(sender)
-    }
-    
-    @IBAction func clickBtn9(_ sender: UIButton) {
-        clickBtnRelatedToFormula(sender)
-    }
-    
-    @IBAction func clickBtnDot(_ sender: UIButton) {
-        clickBtnRelatedToFormula(sender)
-    }
-    
-    @IBAction func clickBtnPlus(_ sender: UIButton) {
-        clickBtnRelatedToFormula(sender)
-    }
-    
-    @IBAction func clickBtnMinus(_ sender: UIButton) {
-        clickBtnRelatedToFormula(sender)
-    }
-    
-    @IBAction func clickBtnMultiply(_ sender: UIButton) {
-        clickBtnRelatedToFormula(sender)
-    }
-    
-    @IBAction func clickBtnDivide(_ sender: UIButton) {
-        clickBtnRelatedToFormula(sender)
-    }
-    
-    @IBAction func clickLeftParenthesis(_ sender: UIButton) {
-        clickBtnRelatedToFormula(sender)
-    }
-    
-    @IBAction func clickRightParenthesis(_ sender: UIButton) {
-        clickBtnRelatedToFormula(sender)
-    }
     
     //--------------------------------//
     // Function Button Action
