@@ -20,19 +20,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var lblFormula: UILabel!
     @IBOutlet weak var lblResult: UILabel!
-    @IBOutlet var formulaButtons: [UIButton]!
     
-    
-    //--------------------------------//
-    // Formula Button Action
-    // A tip to check data type
-    // lblResult.text = String(describing: type(of: sender.titleLabel!.text!))
-    
-    for btn in formulaButtons {
-        btn.addTarget(self, action: #selector(clickBtnRelatedToFormula(_:)), for: .touchUpInside)
-    }
-    
-    
+    @IBOutlet var formulaBtns: [UIButton]!
     
     //--------------------------------//
     // Function Button Action
@@ -51,8 +40,13 @@ class ViewController: UIViewController {
     
     //--------------------------------//
     // Support Functions
+    func formulaBtnsActionInit() {
+        for btn in formulaBtns {
+            btn.addTarget(self, action: #selector(clickBtnRelatedToFormula(_:)), for: .touchUpInside)
+        }
+    }
     
-    func clickBtnRelatedToFormula(_ sender: UIButton) {
+    @objc func clickBtnRelatedToFormula(_ sender: UIButton) {
         addToFormula(sender.titleLabel!.text!)
     }
     
@@ -90,7 +84,7 @@ class ViewController: UIViewController {
         lblFormula.text = formula
         lblResult.text = String(result)
     }
-    
+
     //--------------------------------//
     // Testcases
     
@@ -118,8 +112,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        formulaBtnsActionInit()
         allClear()
         testCase3()
     }
 }
-

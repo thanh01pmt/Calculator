@@ -81,9 +81,6 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="clickLeftParenthesis:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xU2-Qh-UCO"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEM-07-uGX" userLabel="btnRightParenthesis">
                                                 <rect key="frame" x="185.5" y="0.0" width="89" height="74"/>
@@ -99,9 +96,6 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="clickRightParenthesis:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yLN-IA-Siz"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEd-Nk-hys" userLabel="btnDeleteLast">
                                                 <rect key="frame" x="278.5" y="0.0" width="88.5" height="74"/>
@@ -402,23 +396,23 @@
                     <connections>
                         <outlet property="lblFormula" destination="V8T-kg-QOo" id="pib-dC-KqI"/>
                         <outlet property="lblResult" destination="VFt-wf-k1f" id="7eH-i5-ci8"/>
-                        <outletCollection property="formulaButtons" destination="fYr-YH-am3" collectionClass="NSMutableArray" id="GgO-b0-UTZ"/>
-                        <outletCollection property="formulaButtons" destination="9Ln-z0-ewx" collectionClass="NSMutableArray" id="eAx-Xu-ykz"/>
-                        <outletCollection property="formulaButtons" destination="2Fg-jb-SMe" collectionClass="NSMutableArray" id="95V-ZS-tFy"/>
-                        <outletCollection property="formulaButtons" destination="WBv-Gm-5w8" collectionClass="NSMutableArray" id="uN0-v8-kex"/>
-                        <outletCollection property="formulaButtons" destination="rvr-jO-aQ9" collectionClass="NSMutableArray" id="YJj-f3-9JY"/>
-                        <outletCollection property="formulaButtons" destination="9xs-uR-lyM" collectionClass="NSMutableArray" id="lGk-cI-peq"/>
-                        <outletCollection property="formulaButtons" destination="axF-Wh-07f" collectionClass="NSMutableArray" id="qHi-pP-oaZ"/>
-                        <outletCollection property="formulaButtons" destination="gbQ-4l-CTX" collectionClass="NSMutableArray" id="VYu-iu-Ezh"/>
-                        <outletCollection property="formulaButtons" destination="wNd-g1-X0S" collectionClass="NSMutableArray" id="bqA-q3-V4n"/>
-                        <outletCollection property="formulaButtons" destination="lHX-EJ-q26" collectionClass="NSMutableArray" id="xxt-qI-OvU"/>
-                        <outletCollection property="formulaButtons" destination="pQ6-L0-L91" collectionClass="NSMutableArray" id="fYZ-mV-g2f"/>
-                        <outletCollection property="formulaButtons" destination="EfS-T3-ejh" collectionClass="NSMutableArray" id="OcE-ol-Geg"/>
-                        <outletCollection property="formulaButtons" destination="xs1-q3-siP" collectionClass="NSMutableArray" id="0dv-f0-nMq"/>
-                        <outletCollection property="formulaButtons" destination="gkl-Db-twi" collectionClass="NSMutableArray" id="BGH-M4-w8h"/>
-                        <outletCollection property="formulaButtons" destination="t5i-ka-KsS" collectionClass="NSMutableArray" id="NAH-YD-OP2"/>
-                        <outletCollection property="formulaButtons" destination="fCi-Pg-onm" collectionClass="NSMutableArray" id="Uv6-LO-TX7"/>
-                        <outletCollection property="formulaButtons" destination="hEM-07-uGX" collectionClass="NSMutableArray" id="KpF-Fe-e75"/>
+                        <outletCollection property="formulaBtns" destination="pQ6-L0-L91" collectionClass="NSMutableArray" id="Y2W-Ge-ghS"/>
+                        <outletCollection property="formulaBtns" destination="fYr-YH-am3" collectionClass="NSMutableArray" id="1Ff-wx-ppY"/>
+                        <outletCollection property="formulaBtns" destination="9Ln-z0-ewx" collectionClass="NSMutableArray" id="ME3-5z-fmM"/>
+                        <outletCollection property="formulaBtns" destination="2Fg-jb-SMe" collectionClass="NSMutableArray" id="Wox-eq-DyL"/>
+                        <outletCollection property="formulaBtns" destination="EfS-T3-ejh" collectionClass="NSMutableArray" id="kPf-1q-S6d"/>
+                        <outletCollection property="formulaBtns" destination="xs1-q3-siP" collectionClass="NSMutableArray" id="M1c-S4-JUQ"/>
+                        <outletCollection property="formulaBtns" destination="gkl-Db-twi" collectionClass="NSMutableArray" id="cfg-Sn-qcm"/>
+                        <outletCollection property="formulaBtns" destination="t5i-ka-KsS" collectionClass="NSMutableArray" id="FQ8-xi-qK6"/>
+                        <outletCollection property="formulaBtns" destination="WBv-Gm-5w8" collectionClass="NSMutableArray" id="9vG-DK-0x8"/>
+                        <outletCollection property="formulaBtns" destination="rvr-jO-aQ9" collectionClass="NSMutableArray" id="JTt-jG-zEO"/>
+                        <outletCollection property="formulaBtns" destination="9xs-uR-lyM" collectionClass="NSMutableArray" id="emP-6c-3iT"/>
+                        <outletCollection property="formulaBtns" destination="axF-Wh-07f" collectionClass="NSMutableArray" id="7bV-Ag-Sgk"/>
+                        <outletCollection property="formulaBtns" destination="gbQ-4l-CTX" collectionClass="NSMutableArray" id="Uon-dX-bIv"/>
+                        <outletCollection property="formulaBtns" destination="wNd-g1-X0S" collectionClass="NSMutableArray" id="0YV-NT-fL6"/>
+                        <outletCollection property="formulaBtns" destination="lHX-EJ-q26" collectionClass="NSMutableArray" id="D0l-2i-Vsh"/>
+                        <outletCollection property="formulaBtns" destination="fCi-Pg-onm" collectionClass="NSMutableArray" id="8s3-gN-Yi0"/>
+                        <outletCollection property="formulaBtns" destination="hEM-07-uGX" collectionClass="NSMutableArray" id="Avb-my-uyO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
