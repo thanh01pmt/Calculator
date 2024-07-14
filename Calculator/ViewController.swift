@@ -110,7 +110,7 @@ class ViewController: UIViewController {
     }
     
     //--------------------------------//
-    // Support Function
+    // Support Functions
     
     func clickBtnRelatedToFormula(_ sender: UIButton) {
         addToFormula(sender.titleLabel!.text!)
