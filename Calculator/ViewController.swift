@@ -5,6 +5,9 @@
 
 import UIKit
 
+// ViewController chịu trách nhiệm cho phần frontend
+// bao gồm: nhận thông tin tương tác từ người dung (click button)
+// và hiển thị thông tin kết quả ra màn hình.
 class ViewController: UIViewController {
     
     //--------------------------------//
@@ -37,7 +40,33 @@ class ViewController: UIViewController {
     @IBAction func clickBtnDeleteLast(_ sender: UIButton) {
         removeLastCharacter()
     }
+
+    //--------------------------------//
+    // Life Cycle
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        formulaBtnsActionInit()
+        allClear()
+        testCase3()
+    }
+}
+
+
+// Calculator chịu trách nhiệm cho backend hay
+// xử lý công thức toán học & trả về kết quả tính toán tương ứng
+class Calculator {
+    
+    var result: Double = 0.0
+    var preResult: Double = 0.0
+    var formula: String = ""
+    
+    init(result: Double, preResult: Double, formula:String) {
+        self.result = result
+        self.preResult = preResult
+        self.formula = formula
+    }
     //--------------------------------//
     // Support Functions
     func formulaBtnsActionInit() {
@@ -105,15 +134,7 @@ class ViewController: UIViewController {
         lblFormula.text = formula
         calculateResult()
     }
-
-    //--------------------------------//
-    // Life Cycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        formulaBtnsActionInit()
-        allClear()
-        testCase3()
-    }
 }
+
+
+
